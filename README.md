@@ -1,5 +1,5 @@
 # OpenCV-Basics
-Some basic operations of image processing using OpenCV 3.4.3 and Java.
+Some basic operations of image processing done on sample images using OpenCV 3.4.3 and Java.
 
 ## How to run?
 * Open the project in IntelliJ Idea or import into Eclipse.
