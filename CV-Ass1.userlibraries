@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="lib">
+    <archive path="/Users/omardoma/IdeaProjects/CV-Ass1/lib/opencv-343.jar" />
+  </library>
+</eclipse-userlibraries>
+
