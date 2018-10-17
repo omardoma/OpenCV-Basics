@@ -14,9 +14,9 @@ public class DifferentPerspectiveFrame {
 
         Mat fig12 = fig10.clone();
 
-        MatOfPoint2f srcAffine = new MatOfPoint2f(new Point[]{new Point(0, 0), new Point(fig5.cols() - 1, 0), new Point(fig5.cols() - 1, fig5.rows() - 1), new Point(0, fig5.rows() - 1)});
+        MatOfPoint2f srcAffine = new MatOfPoint2f(new Point(0, 0), new Point(fig5.cols() - 1, 0), new Point(fig5.cols() - 1, fig5.rows() - 1), new Point(0, fig5.rows() - 1));
 
-        MatOfPoint2f targetAffine = new MatOfPoint2f(new Point[]{new Point(162, 35), new Point(469, 69), new Point(464, 353), new Point(157, 389)});
+        MatOfPoint2f targetAffine = new MatOfPoint2f(new Point(162, 35), new Point(469, 69), new Point(464, 353), new Point(157, 389));
 
         Mat warpMat = Imgproc.getPerspectiveTransform(srcAffine, targetAffine);
 

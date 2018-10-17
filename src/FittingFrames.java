@@ -1,4 +1,7 @@
-import org.opencv.core.*;
+import org.opencv.core.Core;
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfPoint2f;
+import org.opencv.core.Point;
 import org.opencv.imgproc.Imgproc;
 
 public class FittingFrames {
@@ -11,14 +14,14 @@ public class FittingFrames {
 
         Mat fig7 = CVUtils.readImage("imgs/Q2I3.jpg");
 
-        MatOfPoint2f srcAffine = new MatOfPoint2f(new Point[]{new Point(0, 0), new Point(fig5.cols() - 1, 0), new Point(fig5.cols() - 1, fig5.rows() - 1)});
+        MatOfPoint2f srcAffine = new MatOfPoint2f(new Point(0, 0), new Point(fig5.cols() - 1, 0), new Point(fig5.cols() - 1, fig5.rows() - 1));
 
         MatOfPoint2f targetAffine;
         Mat warpMat;
 
         Mat fig8 = fig6.clone();
 
-        targetAffine = new MatOfPoint2f(new Point[]{new Point(1215, 377), new Point(1309, 377), new Point(1309, 517)});
+        targetAffine = new MatOfPoint2f(new Point(1215, 377), new Point(1309, 377), new Point(1309, 517));
 
         warpMat = Imgproc.getAffineTransform(srcAffine, targetAffine);
 
@@ -26,7 +29,7 @@ public class FittingFrames {
 
         Mat fig9 = fig7.clone();
 
-        targetAffine = new MatOfPoint2f(new Point[]{new Point(368, 92), new Point(705, 128), new Point(665, 560)});
+        targetAffine = new MatOfPoint2f(new Point(368, 92), new Point(705, 128), new Point(665, 560));
 
         warpMat = Imgproc.getAffineTransform(srcAffine, targetAffine);
 
